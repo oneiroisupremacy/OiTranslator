@@ -1,4 +1,4 @@
-```markdown
+```
 # Oi Translator
 
 <div align="center">
