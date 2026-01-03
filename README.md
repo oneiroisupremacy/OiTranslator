@@ -1,88 +1,50 @@
-```
+```markdown
 # Oi Translator
 
-<div align="center">
-  <h3>Fast, Free, & Open Source Subtitle Translator</h3>
-  <p>Powered by ZhipuAI (GLM-4) • Batch Processing • Smart Tag Preservation</p>
-</div>
+A simple and powerful subtitle translator powered by ZhipuAI (GLM-4). Supports batch processing for whole seasons and intelligent tag preservation.
 
----
+## Features
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey?style=for-the-badge)
+- **Batch Processing:** Translate multiple files or entire folders at once.
+- **Free AI Models:** Uses free-tier models like `glm-4.6v-flash`.
+- **Smart Tag Handling:** Keeps formatting tags (position, colors) but removes sound tags (`[MUSIC]`, etc.).
+- **Network Protection:** Auto-pauses on connection failure and resumes when internet is back.
+- **Custom Output:** Flexible naming (e.g., add `_Indo` suffix automatically).
+- **Estimated Time:** Shows real-time ETA during translation.
 
-**Oi Translator** is a cross-platform desktop application designed to translate subtitle files (.srt, .vtt) efficiently using the power of free AI models from ZhipuAI (GLM-4). Perfect for translating whole seasons of TV series or single movie files with ease.
+## Installation
 
-## 🌟 Features
+1. Make sure you have **Python 3.8+** installed.
+2. Download or clone this project.
+3. Install required libraries:
 
-*   **Batch Processing:** Translate single files or entire folders (Seasons) at once.
-*   **Free AI Models:** Utilizes free tier models like `glm-4.6v-flash` and `glm-4.5-flash`.
-*   **Smart Tag Handling:** Intelligently removes non-dialog tags (like `[MUSIC]`, `(SOUND)`) while preserving essential subtitle formatting (like `{\pos(...)}`).
-*   **Pause & Resume:** Control the translation process manually.
-*   **Auto-Pause:** Automatically pauses when internet connection is lost and resumes when reconnected.
-*   **Custom Output Naming:** Flexible output file naming using custom suffixes or language codes (e.g., `_{lang}`).
-*   **ETA Calculation:** Real-time estimation of translation time.
-*   **Bilingual UI:** Clean English/Indonesian interface support.
+```bash
+pip install -r requirements.txt
+```
 
-## 📋 Prerequisites
+> **Note:** If you are on Linux and get an error about `tkinter`, install it via: `sudo apt-get install python3-tk`
 
-*   **Python 3.8+** installed on your system.
-*   **API Key** from [ZhipuAI Open Platform (BigModel.cn)](https://open.bigmodel.cn/).
+## Quick Start
 
-## 🚀 Installation
+1. Get your API Key from [ZhipuAI Open Platform](https://open.bigmodel.cn/).
+2. Run the application:
 
-1.  **Clone or Download** this repository.
-2.  Navigate to the project folder:
-    ```bash
-    cd Oi-Translator
-    ```
-3.  Install required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+python main.py
+```
 
-> **Note for Linux Users:** If you encounter an error about `tkinter`, install it via your package manager:
-> `sudo apt-get install python3-tk`
+3. Paste your API Key in the top field and click **Save**.
+4. Add a file or folder, then click **Start Translation**.
 
-## 🛠️ Configuration (API Key)
+## Troubleshooting
 
-1.  Go to [https://open.bigmodel.cn/](https://open.bigmodel.cn/).
-2.  Sign up and verify your account.
-3.  Go to the **User Center -> API Keys**.
-4.  Copy your API Key (Format: `id.secret`).
-5.  Run `main.py` and paste the key into the application's input field, then click **Save**.
+- **Error 1211 (Model Not Found):** 
+  Verify your API Key. Try selecting a different model in the dropdown (e.g., `glm-3-turbo`).
+  
+- **Internet Issues:** 
+  The app will auto-pause if the connection drops. Click "Resume" when your internet is stable.
 
-## 💻 Usage
+## License
 
-1.  **Run the Application:**
-    ```bash
-    python main.py
-    ```
-2.  **Select Input:**
-    *   Click **"Add Single File"** for one subtitle file.
-    *   Click **"Add Batch Folder"** for a folder containing multiple files (e.g., a TV Series Season).
-3.  **Settings:**
-    *   **Target Language:** Set your desired output language (e.g., "Indonesian").
-    *   **Output Suffix:** Define how the output file is named. Use `{lang}` to auto-insert the language name.
-        *   Example: Input `movie.srt` + Suffix `_{lang}` -> Output `movie_Indonesian.srt`.
-    *   **Speed Mode:** Choose between `Safe`, `Standard`, or `Aggressive` (affects API request rate).
-4.  **Start:** Click **"START TRANSLATION"**.
-5.  **Control:** You can click **"PAUSE"** to stop temporarily or **"STOP"** to end the process.
-
-
-## ⚙️ Troubleshooting
-
-*   **Error 1211 (Model not found):** Ensure your API Key is correct and your account is verified on ZhipuAI. Try switching the model name in the dropdown (e.g., `glm-3-turbo`).
-*   **Connection Error:** The app features "Auto-Pause". If your internet is unstable, it will pause automatically. Wait for the internet to stabilize and click **Resume**.
-*   **Encoding Issues:** The tool uses `chardet` to automatically detect file encoding.
-
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Credits
-
-*   Powered by [ZhipuAI (BigModel)](https://open.bigmodel.cn/)
-*   Built with Python & Tkinter.
+MIT License
 ```
