@@ -1,5 +1,4 @@
-```markdown
-# Oi Translator
+## Oi Translator
 
 A simple and powerful subtitle translator powered by ZhipuAI (GLM-4). Supports batch processing for whole seasons and intelligent tag preservation.
 
@@ -44,7 +43,3 @@ python main.py
 - **Internet Issues:** 
   The app will auto-pause if the connection drops. Click "Resume" when your internet is stable.
 
-## License
-
-MIT License
-```
