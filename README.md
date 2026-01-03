@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 ## Quick Start
 
-1. Get your API Key from [ZhipuAI Open Platform](https://open.bigmodel.cn/).
+1. Get your API Key from ZhipuAI Open Platform https://open.bigmodel.cn/ or https://z.ai/
 2. Run the application:
 
 ```bash
